@@ -14,8 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include, re_path
+from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
+import jobs.views
+
 
 urlpatterns = [
+    path('api-auth/', include('rest_framework.urls')),
+    path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
-]
+    path('blog/', include('blog.urls')),
+    path('', jobs.views.home, name='home'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

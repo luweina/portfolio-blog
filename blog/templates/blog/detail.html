@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#">Blogs<span></span></a></div>
+            <ul class="menu">
+                <li><a href="/" class="menu-btn">Home</a></li>
+                <li><a href="/blog" class="menu-btn">Blog</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1 class="text-center pt-3">{{ blog.title | safe }}</h1>
+        <p class="text-center">{{ blog.pub_date | safe }}</p>
+
+        <br />
+        <br />
+        <p>{{ blog.content | safe }}</p>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    body{
+        margin: 0;
+    }
+    .content {
+        width: 80%;
+        margin: auto;
+    }
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        background-color: #FA7921;
+        width: 100%;
+        z-index: 999;
+        padding: 30px 0;
+        font-family: "Ubuntu", sans-serif;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.sticky {
+        padding: 15px 0;
+        background: #FA7921;
+    }
+
+    .navbar .max-width {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navbar .logo a {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    .navbar .logo a span {
+
+        transition: all 0.3s ease;
+    }
+
+    .navbar.sticky .logo a span {
+        color: #fff;
+    }
+
+    .navbar .menu li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .navbar .menu li a {
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 25px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar .menu li a:hover {
+        color: #FA7921;
+    }
+
+    .navbar.sticky .menu li a:hover {
+        color: #fff;
+    }
+
+    /* menu btn styling */
+    .menu-btn {
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .scroll-up-btn {
+
+        height: 45px;
+        width: 42px;
+        background: #FA7921;
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        z-index: 9999;
+        font-size: 30px;
+        border-radius: 6px;
+        border-bottom-width: 2px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .scroll-up-btn.show {
+        bottom: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scroll-up-btn:hover {
+        filter: brightness(90%);
+    }
+</style>
