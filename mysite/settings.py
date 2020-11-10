@@ -142,6 +142,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
