@@ -72,6 +72,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
         'USER': 'postgres',
-        'PASSWORD': 'xhVv8YhYV8B9',
+        'PASSWORD': 'U9ap0m7NGtuZ',
         'HOST': 'localhost',
         'PORT': '5432',
     }
