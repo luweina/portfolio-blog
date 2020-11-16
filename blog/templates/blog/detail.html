@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
-                <a href="#">Blogs<span></span></a></div>
+                <a href="/blog">Blogs<span></span></a></div>
             <ul class="menu">
                 <li><a href="/" class="menu-btn">Home</a></li>
                 <li><a href="/blog" class="menu-btn">Blog</a></li>
@@ -29,6 +29,7 @@
         <br />
         <br />
         <p>{{ blog.content | safe }}</p>
+        <a href="/blog" class="back">Back</a>
     </div>
 
 </body>
@@ -36,9 +37,10 @@
 </html>
 
 <style>
-    body{
+    body {
         margin: 0;
     }
+
     .content {
         width: 80%;
         margin: auto;
@@ -145,5 +147,24 @@
 
     .scroll-up-btn:hover {
         filter: brightness(90%);
+    }
+
+    .back {
+        display: inline-block;
+        background: #fa7921;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 16px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid #fa7921;
+        transition: all 0.3s ease;
+    }
+
+    .back:hover {
+        color: #fa7921;
+        background: none;
+
     }
 </style>

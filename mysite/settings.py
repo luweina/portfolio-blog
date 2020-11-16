@@ -25,7 +25,11 @@ SECRET_KEY = 'iix#@wbpki773vs=rf&vau(9uv#e@skm1iq4@qrvljmlu0%gw4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['142.93.117.148', 'danielna.dev', 'www.danielna.dev', 'www.danieldev.site', 'danieldev.site']
+=======
+ALLOWED_HOSTS = ['142.93.117.148', 'danielna.dev', 'www.danielna.dev', 'localhost']
+>>>>>>> b272e4fd14d6ee9a256d0dc34a4ce484bebc6a89
 
 
 # Application definition
@@ -84,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
         'USER': 'postgres',
-        'PASSWORD': 'U9ap0m7NGtuZ',
+        'PASSWORD': 'xhVv8YhYV8B9',
         'HOST': 'localhost',
         'PORT': '5432',
     }

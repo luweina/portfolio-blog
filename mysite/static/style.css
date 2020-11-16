@@ -324,7 +324,7 @@ section .title::after {
 /* skills section styling */
 
 .skills .title::after {
-  content: "what i know";
+  content: "Frameworks and languages I use.";
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);

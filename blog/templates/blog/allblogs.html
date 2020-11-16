@@ -29,7 +29,7 @@
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
-                <a href="#">Portfo<span>lio.</span></a></div>
+                <a href="/blog">Blogs</a></div>
             <ul class="menu">
                 <li><a href="/" class="menu-btn">Home</a></li>
                 <li><a href="/blog" class="menu-btn">Blog</a></li>
@@ -54,7 +54,7 @@
         </div>
     </section>
 
-    <div class="blog-container">
+    <!-- <div class="blog-container">
         {% for blog in blogs.all %}
         <div class="wine-row">
             <img class="thumb" src="{{ blog.image.url }}">
@@ -66,7 +66,21 @@
             </div>
         </div>
         {% endfor %}
+    </div> -->
+    {% for blog in blogs.all %}
+    <div class="post-container">
+        <div class="image-left">
+            <img src="{{ blog.image.url }}" alt="Human Rights Logo" />
+            <div>
+                <h2>{{ blog.title }}</h2>
+                <p>{{ blog.caption }}</p>
+                <div><a class="read-more" href="{% url 'detail' blog.id %}"class="button">Read More</a></div>
+            </div>
+        </div>
     </div>
+    {% endfor %}
+
+
 
     <footer>
         <span>Created By <a href="#">Daniel</a> | <span class="far fa-copyright"></span> 2020 All rights
