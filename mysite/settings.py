@@ -25,7 +25,11 @@ SECRET_KEY = 'iix#@wbpki773vs=rf&vau(9uv#e@skm1iq4@qrvljmlu0%gw4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['142.93.117.148', 'danielna.dev', 'www.danielna.dev', 'localhost']
+
+ALLOWED_HOSTS = ['142.93.117.148', 'danielna.dev', 'www.danielna.dev', 'www.danieldev.site', 'danieldev.site']
+
+
+
 
 
 # Application definition
