@@ -26,7 +26,7 @@ SECRET_KEY = 'iix#@wbpki773vs=rf&vau(9uv#e@skm1iq4@qrvljmlu0%gw4'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['142.93.117.148', 'danielna.dev', 'www.danielna.dev', 'www.danieldev.site', 'danieldev.site']
+ALLOWED_HOSTS = ['142.93.117.148', 'danielna.dev', 'www.danielna.dev', 'www.danieldev.site', 'danieldev.site', 'localhost']
 
 
 
